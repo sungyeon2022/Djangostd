@@ -12,6 +12,6 @@ class Qs(models.Model):
         return self.sbj
 
 class Aw(models.Model):
-    qus = models.ForeignKey(Qs, on_delete=models.CASCADE)
+    qs = models.ForeignKey(Qs, on_delete=models.CASCADE)
     con = models.TextField()
     create_date = models.DateTimeField()

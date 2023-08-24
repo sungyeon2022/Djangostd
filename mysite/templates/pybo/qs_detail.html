@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="utf-8">
+    <title>답변</title>
+  </head>
+  <body>
+    <h1>{{qs.sbj}}</h1>
+    <div class="">
+      {{qs.con}}
+    </div>
+    <h5>{{qs.aw_set.count}}</h5>
+    <form action="{% url 'pybo:aw_create' qs.id %}" method="post">
+      {% csrf_token %}
+      <textarea name="con" id="con" rows="15"></textarea>
+      <input type="submit" value="답변등록">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="utf-8">
+    <title> 예시 </title>
+    <link rel="stylesheet" href="/css/master.css">
+  </head>
+  <body>
+    {% if qs_list %}
+      <ul>
+        {% for qs in qs_list %}
+          <li><a href="{% url 'pybo:detail' qs.id %}">{{qs.sbj}}</a></li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>질문이 없습니다.</p>
+    {% endif %}
+  </body>
+</html>
